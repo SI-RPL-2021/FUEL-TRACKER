@@ -285,8 +285,6 @@
 
 					</ul>
 				</div>
-				<!-- /main navigation -->
-
 			</div>
 		</div>
 		<!-- /sidebar content -->
