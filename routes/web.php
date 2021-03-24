@@ -30,3 +30,10 @@ Route::post('/admin/drivers/save', 'App\Http\Controllers\Admin\DriversController
 Route::post('/admin/drivers/dt', 'App\Http\Controllers\Admin\DriversController@drivers_dt');
 Route::post('/admin/drivers/add', 'App\Http\Controllers\Admin\DriversController@drivers_add');
 Route::post('/admin/drivers/delete', 'App\Http\Controllers\Admin\DriversController@drivers_delete');
+
+Route::get('/admin/supervisors', 'App\Http\Controllers\Admin\SupervisorsController@index');
+Route::post('/admin/supervisors/edit', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_edit');
+Route::post('/admin/supervisors/save', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_save');
+Route::post('/admin/supervisors/dt', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_dt');
+Route::post('/admin/supervisors/add', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_add');
+Route::post('/admin/supervisors/delete', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_delete');
