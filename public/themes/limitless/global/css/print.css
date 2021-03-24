@@ -1,0 +1,27 @@
+@media screen, print {
+    body {
+        font-family: Arial;
+        font-size: 11px;
+        color: #000000;
+    }
+    table, th, td {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 5px;
+    }
+    .br-0 {
+        border-right: 0px;
+    }
+    .bx-0 {
+        border-right: 0px;
+        border-left: 0px;
+    }
+    .bl-0 {
+        border-left: 0px;
+    }
+    p, li {
+        text-align: justify;
+    }
+}
