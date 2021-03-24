@@ -10,8 +10,8 @@
                 <div class="col-lg-6 border-start p-5">
                     <div class="d-flex">
                         <div class="mx-auto w-100" style="max-width: 500px">
-                            <h3 class="text-danger fw-bold">Fuel Delivery Tracker</h3>
-                            <h6 class="text-muted mb-3">Login untuk Melanjutkan.</h6>
+                            <h3 class="text-danger fw-bold text-center">Fuel Delivery Tracker</h3>
+                            <h6 class="text-muted mb-3 text-center">Login untuk Melanjutkan.</h6>
                             <form action="{{url('/login_eval')}}" method="POST" >
                                 @csrf
                                 <div class="mb-3">
