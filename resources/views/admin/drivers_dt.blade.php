@@ -24,7 +24,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                     <center>
-                        <h2 style="color:#AA2B1D; font-weight: bold" class='mb-2'>Data Driver</h2>
+                    <h2 style="color:#AA2B1D; font-weight: bold" class='mb-2'>Data Driver</h2>
                     </center>
                     <input type="hidden" id="uid" />
                     <div class="row">
