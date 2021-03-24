@@ -267,7 +267,11 @@
 								<i class="icon-stats-bars"></i> <span>Dashboard</span>
 							</a>
 						</li>
-
+						<li class="nav-item">
+							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>view task</span>
+							</a>
+						</li>
 						<!-- <li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-database-check"></i> <span>Data Master</span></a>
 
