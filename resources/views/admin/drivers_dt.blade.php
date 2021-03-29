@@ -21,8 +21,7 @@
         <div class="modal-dialog modal-md modal-dialog-centered" style="border-radius: 10%">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <center>
                     <h2 style="color:#AA2B1D; font-weight: bold" class='mb-2'>Data Driver</h2>
                     </center>
