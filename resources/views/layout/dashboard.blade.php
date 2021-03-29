@@ -267,22 +267,12 @@
 								<i class="icon-stats-bars"></i> <span>Dashboard</span>
 							</a>
 						</li>
-
-						<!-- <li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-database-check"></i> <span>Data Master</span></a>
-
-							<ul class="nav nav-group-sub" data-submenu-title="Modul Data Master">
-								<li class="nav-item"><a href="{{ url('data/university') }}" class="nav-link {{ request()->is('data/university') ? 'active' : '' }}">Profile Universitas</a></li>
-								<li class="nav-item"><a href="{{ url('data/faculty') }}" class="nav-link {{ request()->is('data/faculty') ? 'active' : '' }}">Master Fakultas</a></li>
-								<li class="nav-item"><a href="{{ url('data/study_program') }}" class="nav-link {{ request()->is('data/study_program') ? 'active' : '' }}">Master Program Studi</a></li>
-								<li class="nav-item"><a href="{{ url('data/class_room') }}" class="nav-link {{ request()->is('data/class_room') ? 'active' : '' }}">Master Ruangan</a></li>
-								<li class="nav-item"><a href="{{ url('data/kelompok_keahlian') }}" class="nav-link {{ request()->is('data/kelompok_keahlian') ? 'active' : '' }}">Master Kelompok Keahlian</a></li>
-								<li class="nav-item"><a href="{{ url('data/lokasi_kerja') }}" class="nav-link {{ request()->is('data/lokasi_kerja') ? 'active' : '' }}">Master Lokasi Kerja</a></li>
-								<li class="nav-item"><a href="{{ url('data/batch_class') }}" class="nav-link {{ request()->is('data/batch_class') ? 'active' : '' }}">Master Angkatan Kelas</a></li>
-								<li class="nav-item"><a href="{{ url('data/school_year') }}" class="nav-link {{ request()->is('data/school_year') ? 'active' : '' }}">Master Tahun Ajar</a></li>
-							</ul>
-						</li> -->
-
+						<li class="nav-item">
+							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>New Task</span>
+							</a>
+						</li>
+						
 					</ul>
 				</div>
 			</div>
