@@ -227,12 +227,9 @@
 	<!-- Sidebar -->
 	<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md align-self-start" style="background:#AA2B1D">
     <img src="{{url('public/images/logo.png')}}" width="100%"clas />
-
 		<!-- Sidebar content -->
 		<div class="sidebar-content pt-0">
 			<div class="card card-sidebar-mobile">
-
-
 				<!-- User menu -->
 				<div class="sidebar-user">
 					<div class="card-body">
@@ -244,10 +241,9 @@
 							<div class="media-body">
 								<div class="media-title font-weight-semibold">Riski Ananda Widiya Putri</div>
 								<div class="font-size-xs opacity-50">
-									Sebagai Driver
+									Sebagai Admin
 								</div>
 							</div>
-
 							<div class="ml-3 align-self-center">
 								<a href="#" class="text-white"><i class="icon-cog3"></i></a>
 							</div>
@@ -255,30 +251,20 @@
 					</div>
 				</div>
 				<!-- /user menu -->
-
-
 				<!-- Main navigation -->
 				<div class="card-body p-0">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
-
 						<!-- Main -->
 						<li class="nav-item">
 							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
 								<i class="icon-stats-bars"></i> <span>Dashboard</span>
 							</a>
 						</li>
-						<li class="nav-item">
-							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
-								<i class="icon-stats-bars"></i> <span>New Task</span>
-							</a>
-						</li>
-						
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!-- /sidebar content -->
-
 	</div>
 	<div class="content-wrapper">
 		<div class="content">

@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::post('/login_eval', 'App\Http\Controllers\UserController@index');
 Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 
+Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+
 Route::get('/drivers', 'App\Http\Controllers\DriversController@index');
 
 Route::get('/supervisors', 'App\Http\Controllers\SupervisorsController@index');

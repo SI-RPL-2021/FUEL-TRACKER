@@ -1,7 +1,7 @@
 @extends('layout.dashboard')
 
 @section('content')
-dashboard driver
+dashboard admin
 @endsection
 
 @section('js_section')

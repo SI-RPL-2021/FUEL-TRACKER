@@ -1,7 +1,7 @@
 @extends('layout.dashboard')
 
 @section('content')
-    
+    dashboard supervisor
 @endsection
 
 @section('js_section')
