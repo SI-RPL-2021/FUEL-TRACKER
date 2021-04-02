@@ -260,6 +260,26 @@
 								<i class="icon-stats-bars"></i> <span>Dashboard</span>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="{{url('/admin/drivers')}}" class="nav-link {{ Request::is('/admin/drivers') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Data Driver</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{url('/admin/supervisors')}}" class="nav-link {{ Request::is('/admin/supervisors') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Data Supervisor</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{url('/admin/spbus')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Data SPBU</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{url('/admin/tasks')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Data Task</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
