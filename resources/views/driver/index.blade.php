@@ -5,7 +5,7 @@ dashboard driver
 @endsection
 
 @section('js_section')
-    <script src="{{ url('public/themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js') }}">
+    <script src="{{ url('themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js') }}">
     </script>
     <script>
 

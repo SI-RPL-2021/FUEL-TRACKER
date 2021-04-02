@@ -12,17 +12,17 @@
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/css/icons/icomoon/styles.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/css/icons/flag-icon/css/flag-icon.min.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/css/icons/fontawesome/styles.min.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/js/plugins/pickers/bootstrap-datepicker.min.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/js/plugins/pickers/bootstrap-datepicker-themes.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/layout_3/css/bootstrap.min.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/layout_3/css/bootstrap_limitless.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/layout_3/css/layout.min.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/layout_3/css/components.min.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/layout_3/css/colors.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{url('public/themes/limitless/global/css/custom.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/css/icons/icomoon/styles.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/css/icons/flag-icon/css/flag-icon.min.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/css/icons/fontawesome/styles.min.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/js/plugins/pickers/bootstrap-datepicker.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/js/plugins/pickers/bootstrap-datepicker-themes.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/bootstrap.min.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/bootstrap_limitless.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/layout.min.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/components.min.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/colors.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/css/custom.css')}}">
 
 	<!-- /global stylesheets -->
 
@@ -226,7 +226,7 @@
 <div class="page-content pt-0">
 	<!-- Sidebar -->
 	<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md align-self-start" style="background:#AA2B1D">
-    <img src="{{url('public/images/logo.png')}}" width="100%"clas />
+    <img src="{{url('images/logo.png')}}" width="100%"clas />
 		<!-- Sidebar content -->
 		<div class="sidebar-content pt-0">
 			<div class="card card-sidebar-mobile">
@@ -235,7 +235,7 @@
 					<div class="card-body">
 						<div class="media">
 							<div class="mr-3">
-								<a href="#"><img src="{{ url('public/images/kiki.jpg') }}" width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="{{ url('images/kiki.jpg') }}" width="38" height="38" class="rounded-circle" alt=""></a>
 							</div>
 
 							<div class="media-body">
@@ -298,28 +298,28 @@
 <!-- /footer -->
 
 <!-- Core JS files -->
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/main/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/main/bootstrap.bundle.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/loaders/blockui.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/main/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/main/bootstrap.bundle.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/loaders/blockui.min.js')}}"></script>
 <!-- Core JS files -->
 
-<script type="text/javascript" src="{{url('public/themes/limitless/layout_4/js/app.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/datatables.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/extensions/jszip/jszip.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/extensions/buttons/dataTables.buttons.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/tables/datatables/extensions/buttons/buttons.html5.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/forms/selects/select2.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/forms/validation/validate.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/forms/validation/additional-methods.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/forms/styling/uniform.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/notifications/noty.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/setting.js?v='.time())}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/ui/moment/moment.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/pickers/bootstrap-datepicker.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js')}}"></script>
-<script type="text/javascript" src="{{url('public/themes/limitless/global/js/demo_pages/form_select2.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/layout_4/js/app.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/extensions/jszip/jszip.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/extensions/buttons/dataTables.buttons.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/tables/datatables/extensions/buttons/buttons.html5.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/forms/selects/select2.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/forms/validation/validate.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/forms/validation/additional-methods.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/forms/styling/uniform.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/notifications/noty.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/setting.js?v='.time())}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/ui/moment/moment.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/pickers/bootstrap-datepicker.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js')}}"></script>
+<script type="text/javascript" src="{{url('themes/limitless/global/js/demo_pages/form_select2.js')}}"></script>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>

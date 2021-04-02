@@ -5,7 +5,7 @@
         <div class="my-auto bg-white rounded px-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 py-5 d-flex">
-                    <img width="100%" src="{{ asset('public/images/logo.png') }}" class="m-auto" alt="Image"/>
+                    <img width="100%" src="{{ asset('images/logo.png') }}" class="m-auto" alt="Image"/>
                 </div>
                 <div class="col-lg-6 border-start p-5">
                     <div class="d-flex">
