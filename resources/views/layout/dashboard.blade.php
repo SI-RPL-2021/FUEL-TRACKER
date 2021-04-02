@@ -239,9 +239,9 @@
 							</div>
 
 							<div class="media-body">
-								<div class="media-title font-weight-semibold">Riski Ananda Widiya Putri</div>
+								<div class="media-title font-weight-semibold">{{Session::get('user')->fullname}}</div>
 								<div class="font-size-xs opacity-50">
-									Sebagai Admin
+									Sebagai {{Session::get('user')->role}}
 								</div>
 							</div>
 							<div class="ml-3 align-self-center">
