@@ -38,15 +38,13 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>SPBU</label>
-                            <input type="text" class="form-control" name="spbu_name" id="spbu_name" placeholder="SPBU">
+                            <select name="spbu_name" id="spbu_name" class="form-control select2">
+                                <option selected value="">...</option>
+                            </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Nomor Handphone</label>
                             <input type="text" class="form-control" name="phone_no" id="phone_no" placeholder="Nomor Handphone">
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label>IFrame Rute SPBU</label>
-                            <textarea rows='3' class="form-control" name="spbu_iframe" id="spbu_iframe" placeholder="IFrame Rute SPBU"></textarea>
                         </div>
                     </div>
                 </div>
