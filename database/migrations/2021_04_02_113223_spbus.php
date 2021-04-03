@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdSuper1 extends Migration
+class Spbus extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,17 @@ class UpdSuper1 extends Migration
      */
     public function up()
     {
+        Schema::create('spbus', function(Blueprint $table)
+        {
+            $table->increments('spbu_id', true);
+            $table->text('address');
+            $table->string('city');
+            $table->text('spbu_iframe');
+            $table->string('spbu_name');
+            $table->timestamps();
+        });
         Schema::table('supervisors', function($table) {
-            $table->text('spbu_iframe')->change();
+            $table->foreign('spbu_id')->references('spbu_id')->on('spbus');
         });
     }
 

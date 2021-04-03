@@ -17,9 +17,8 @@ class Supervisor extends Migration
         {
             $table->increments('sid', true);
             $table->string('phone_no');
-            $table->string('spbu_name');
-            $table->string('spbu_iframe');
             $table->timestamps();
+            $table->integer('spbu_id')->unsigned()->nullable();
         });
         Schema::table('users', function($table) {
             $table->foreign('sid')->references('sid')->on('supervisors');
