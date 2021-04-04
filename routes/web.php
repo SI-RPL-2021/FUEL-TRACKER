@@ -39,3 +39,5 @@ Route::post('/admin/supervisors/save', 'App\Http\Controllers\Admin\SupervisorsCo
 Route::post('/admin/supervisors/dt', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_dt');
 Route::post('/admin/supervisors/add', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_add');
 Route::post('/admin/supervisors/delete', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_delete');
+
+Route::get('/admin/spbus', 'App\Http\Controllers\Admin\SpbuController@index');
