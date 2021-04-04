@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Users;
 use App\Models\Supervisors;
+use App\Models\Spbu;
 
 class SupervisorsController extends Controller
 {
     public function index(Request $request){
-        return view('admin.supervisors_dt');
+        $spbus = Spbu::all();
+        return view('admin.supervisors_dt', compact('spbus'));
     }
 
     public function supervisors_dt(Request $reqest){
@@ -23,10 +25,7 @@ class SupervisorsController extends Controller
             return $db->username;
         })
         ->addColumn('spbu_name', function($db){
-            return $db->supervisor_data->spbu_name;
-        })
-        ->addColumn('spbu_iframe', function($db){
-            return $db->supervisor_data->spbu_iframe;
+            return $db->supervisor_data->spbu->spbu_name;
         })
         ->addColumn('fullname', function($db){
             return $db->fullname;
@@ -49,11 +48,9 @@ class SupervisorsController extends Controller
         $username = $request->username;
         $phone_no = $request->phone_no;
         $spbu_name = $request->spbu_name;
-        $spbu_iframe = $request->spbu_iframe;
         $fullname = $request->fullname;
         $supervisor = new Supervisors();
-        $supervisor->spbu_name = $spbu_name;
-        $supervisor->spbu_iframe = $spbu_iframe;
+        $supervisor->spbu_id = $spbu_name;
         $supervisor->phone_no = $phone_no;
         $supervisor->save();
         $user = new Users();
@@ -68,7 +65,7 @@ class SupervisorsController extends Controller
 
     public function supervisors_edit(Request $request){
         $data = Users::join('supervisors','supervisors.sid','=','users.sid')
-        ->select('users.*', 'supervisors.spbu_name','supervisors.spbu_iframe','supervisors.phone_no')
+        ->select('users.*', 'supervisors.spbu_id','supervisors.phone_no')
         ->where('uid','=',$request->id)->first()->toJson();
         return $data;
     }
@@ -77,7 +74,6 @@ class SupervisorsController extends Controller
         $username = $request->username;
         $phone_no = $request->phone_no;
         $spbu_name = $request->spbu_name;
-        $spbu_iframe = $request->spbu_iframe;
         $fullname = $request->fullname;
         $user = Users::where('uid','=',intval($request->id))->first();
         $user->username = $username;

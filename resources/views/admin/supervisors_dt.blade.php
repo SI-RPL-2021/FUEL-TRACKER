@@ -6,7 +6,7 @@
         <table class="table table-striped" id="table">
             <thead style='background:#AA2B1D; font-weight: bold' class='text-white'>
                 <tr>
-                    <th>ID Supervisor</th>
+                    <th>ID Driver</th>
                     <th>Username</th>
                     <th>Nama Supervisor</th>
                     <th>SPBU</th>
@@ -21,10 +21,10 @@
         <div class="modal-dialog modal-md modal-dialog-centered" style="border-radius: 10%">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                     <center>
-                    <h2 style="color:#AA2B1D; font-weight: bold" class='mb-2'>Data Supervisor</h2>
+                        <h2 style="color:#AA2B1D; font-weight: bold" class='mb-2'>Data Supervisor</h2>
                     </center>
                     <input type="hidden" id="uid" />
                     <div class="row">
@@ -40,6 +40,9 @@
                             <label>SPBU</label>
                             <select name="spbu_name" id="spbu_name" class="form-control select2">
                                 <option selected value="">...</option>
+                                @foreach($spbus as $item)
+                                <option value="{{$item->spbu_id}}">{{$item->spbu_name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-md-6">
@@ -61,7 +64,7 @@
 @endsection
 
 @section('js_section')
-    <script src="{{ url('themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js') }}">
+    <script src="{{ url('public/themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js') }}">
     </script>
     <script>
         function openModal() {
@@ -74,7 +77,7 @@
         }
 
         function add() {
-            if($('#username').val() && $('#phone_no').val() && $('#spbu_name').val() && $('#fullname').val() && $('#spbu_iframe').val())
+            if($('#username').val() && $('#phone_no').val() && $('#spbu_name').val() && $('#fullname').val())
             $.ajax({
                 url:'{{ url("admin/supervisors/add") }}',
                 type:'post',
@@ -83,7 +86,6 @@
                     username: $('#username').val(),
                     phone_no: $('#phone_no').val(),
                     spbu_name: $('#spbu_name').val(),
-                    spbu_iframe: $('#spbu_iframe').val(),
                     fullname: $('#fullname').val()
                 }),
                 headers: {
@@ -112,8 +114,8 @@
                 success: function(e) {
                     $('#username').val(e.username)
                     $('#phone_no').val(e.phone_no)
-                    $('#spbu_name').val(e.spbu_name)
-                    $('#spbu_iframe').html(e.spbu_iframe)
+                    $('#spbu_name').val(e.spbu_id)
+                    $('#spbu_name').trigger('change')
                     $('#fullname').val(e.fullname)
                     $('#uid').val(e.uid)
                     $('#frmbox').modal({keyboard: false, backdrop: 'static'});
@@ -131,7 +133,6 @@
                     username: $('#username').val(),
                     phone_no: $('#phone_no').val(),
                     spbu_name: $('#spbu_name').val(),
-                    spbu_iframe: $('#spbu_iframe').val(),
                     fullname: $('#fullname').val(),
                     id: $('#uid').val()
                 }),
@@ -187,13 +188,13 @@
                         className: 'center'
                     },
                     {
-                        data: 'spbu_name',
-                        name: 'spbu_name',
+                        data: 'fullname',
+                        name: 'fullname',
                         className: 'center'
                     },
                     {
-                        data: 'fullname',
-                        name: 'fullname',
+                        data: 'spbu_name',
+                        name: 'spbu_name',
                         className: 'center'
                     },
                     {
