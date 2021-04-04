@@ -41,22 +41,6 @@ class SpbuController extends Controller
         return $spbu->toJson();
     }
 
-    public function spbus_edit(Request $request){
-        return Spbu::where('spbu_id','=',$request->id)->first()->toJson();
-    }
-
-    public function spbus_save(Request $request){
-        $spbu = Spbu::where('spbu_id','=',intval($request->id))->first();
-        $spbu->spbu_name = $request->spbu_name;
-        $spbu->spbu_iframe = $request->iframe;
-        $spbu->address = $request->address;
-        $spbu->city = $request->city;
-        $spbu->save();
-        return $spbu->toJson();
-    }
-
-    public function spbus_delete(Request $request){
-        return Spbu::where('spbu_id','=',$request->id)->first()->delete();
-    }
+  
 
 }

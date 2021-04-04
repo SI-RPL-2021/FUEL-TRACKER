@@ -41,3 +41,10 @@ Route::post('/admin/supervisors/add', 'App\Http\Controllers\Admin\SupervisorsCon
 Route::post('/admin/supervisors/delete', 'App\Http\Controllers\Admin\SupervisorsController@supervisors_delete');
 
 Route::get('/admin/spbus', 'App\Http\Controllers\Admin\SpbuController@index');
+Route::get('/admin/spbus', 'App\Http\Controllers\Admin\SpbuController@index');
+
+Route::post('/admin/spbus/edit', 'App\Http\Controllers\Admin\SpbuController@spbus_edit');
+Route::post('/admin/spbus/save', 'App\Http\Controllers\Admin\SpbuController@spbus_save');
+Route::post('/admin/spbus/dt', 'App\Http\Controllers\Admin\SpbuController@spbus_dt');
+Route::post('/admin/spbus/add', 'App\Http\Controllers\Admin\SpbuController@spbus_add');
+Route::post('/admin/spbus/delete', 'App\Http\Controllers\Admin\SpbuController@spbus_delete');
