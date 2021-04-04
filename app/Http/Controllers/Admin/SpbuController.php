@@ -41,6 +41,8 @@ class SpbuController extends Controller
         return $spbu->toJson();
     }
 
-  
+    public function spbus_edit(Request $request){
+        return Spbu::where('spbu_id','=',$request->id)->first()->toJson();
+    }
 
 }
