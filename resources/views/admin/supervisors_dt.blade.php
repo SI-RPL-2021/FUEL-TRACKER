@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>Nama Supervisor</label>
-                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Nama Driver">
+                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Nama Supervisor">
                         </div>
                         <div class="form-group col-md-6">
                             <label>SPBU</label>
@@ -46,8 +46,8 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label>Nomor Handphone</label>
-                            <input type="text" class="form-control" name="phone_no" id="phone_no" placeholder="Nomor Handphone">
+                            <label>Nomor Telepon</label>
+                            <input type="text" class="form-control" name="phone_no" id="phone_no" placeholder="Nomor Telepon">
                         </div>
                     </div>
                 </div>
