@@ -53,5 +53,7 @@ class SpbuController extends Controller
         $spbu->save();
         return $spbu->toJson();
     }
-
+    public function spbus_delete(Request $request){
+        return Spbu::where('spbu_id','=',$request->id)->first()->delete();
+    }
 }
