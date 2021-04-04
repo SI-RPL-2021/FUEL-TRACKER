@@ -33,8 +33,8 @@
                             <input type="text" class="form-control" name="spbu_name" id="spbu_name" placeholder="Nama SPBU">
                         </div>
                         <div class="form-group col-md-6">
-                            <label>Kota</label>
-                            <input type="text" class="form-control" name="city" id="city" placeholder="Kota">
+                            <label>Kota/Kabupaten</label>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="Kota/Kabupaten">
                         </div>
                         <div class="form-group col-md-12">
                             <label>Alamat SPBU</label>
