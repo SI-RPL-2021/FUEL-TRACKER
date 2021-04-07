@@ -23,6 +23,7 @@
 	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/components.min.css')}}">
 	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/layout_3/css/colors.css')}}">
 	<link type="text/css" rel="stylesheet" href="{{url('themes/limitless/global/css/custom.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{url('styles/app.css')}}">
 
 	<!-- /global stylesheets -->
 
