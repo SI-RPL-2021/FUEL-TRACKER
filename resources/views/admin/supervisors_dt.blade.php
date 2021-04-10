@@ -124,7 +124,7 @@
         }
 
         function update() {
-            if($('#username').val() && $('#phone_no').val() && $('#spbu_name').val() && $('#fullname').val() && $('#spbu_iframe').val())
+            if($('#username').val() && $('#phone_no').val() && $('#spbu_name').val() && $('#fullname').val())
             $.ajax({
                 url:'{{ url("admin/supervisors/save") }}',
                 type:'post',

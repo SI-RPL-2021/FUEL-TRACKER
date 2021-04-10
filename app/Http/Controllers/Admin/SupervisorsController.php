@@ -79,8 +79,7 @@ class SupervisorsController extends Controller
         $user->username = $username;
         $user->fullname = $fullname;
         $supervisor = Supervisors::where('sid','=',$user->sid)->first();
-        $supervisor->spbu_name = $spbu_name;
-        $supervisor->spbu_iframe = $spbu_iframe;
+        $supervisor->spbu_id= $spbu_name;
         $supervisor->phone_no = $phone_no;
         $user->save();
         $supervisor->save();
