@@ -13,4 +13,7 @@ class Supervisors extends Model
     public function spbu(){
         return $this->hasOne(Spbu::class, 'spbu_id','spbu_id');
     }
+    public function user(){
+        return $this->belongsTo(Users::class, 'uid','uid');
+    }
 }
