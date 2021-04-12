@@ -263,17 +263,17 @@
 						</li>
 						<li class="nav-item">
 							<a href="{{url('/admin/drivers')}}" class="nav-link {{ Request::is('/admin/drivers') ? 'active' : '' }}">
-								<i class="icon-people"></i> <span>Data Driver</span>
+								<i class="fa fa-user"></i> <span>Data Driver</span>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="{{url('/admin/supervisors')}}" class="nav-link {{ Request::is('/admin/supervisors') ? 'active' : '' }}">
-								<i class="icon-people"></i> <span>Data Supervisor</span>
+								<i class="fa fa-user"></i> <span>Data Supervisor</span>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="{{url('/admin/spbus')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
-								<i class="icon-pin"></i> <span>Data SPBU</span>
+								<i class="fa fa-building"></i> <span>Data SPBU</span>
 							</a>
 						</li>
 						<li class="nav-item">

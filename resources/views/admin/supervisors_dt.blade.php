@@ -6,7 +6,7 @@
         <table class="table table-striped" id="table">
             <thead style='background:#AA2B1D; font-weight: bold' class='text-white'>
                 <tr>
-                    <th>ID Driver</th>
+                    <th>ID Supervisor</th>
                     <th>Username</th>
                     <th>Nama Supervisor</th>
                     <th>SPBU</th>

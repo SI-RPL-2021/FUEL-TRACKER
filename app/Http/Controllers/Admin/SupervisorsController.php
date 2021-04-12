@@ -66,7 +66,7 @@ class SupervisorsController extends Controller
     public function supervisors_edit(Request $request){
         $data = Users::join('supervisors','supervisors.sid','=','users.sid')
         ->select('users.*', 'supervisors.spbu_id','supervisors.phone_no')
-        ->where('uid','=',$request->id)->first()->toJson();
+        ->where('users.uid','=',$request->id)->first()->toJson();
         return $data;
     }
 

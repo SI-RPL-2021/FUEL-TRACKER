@@ -64,7 +64,7 @@ class DriversController extends Controller
     public function drivers_edit(Request $request){
         $data = Users::join('drivers','drivers.did','=','users.did')
         ->select('users.*', 'drivers.vehicle_no','drivers.phone_no')
-        ->where('uid','=',$request->id)->first()->toJson();
+        ->where('users.uid','=',$request->id)->first()->toJson();
         return $data;
     }
 
