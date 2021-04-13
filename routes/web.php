@@ -53,3 +53,4 @@ Route::post('/admin/tasks/dt', 'App\Http\Controllers\Admin\TaskController@tasks_
 Route::post('/admin/tasks/add', 'App\Http\Controllers\Admin\TaskController@tasks_add');
 Route::post('/admin/tasks/edit', 'App\Http\Controllers\Admin\TaskController@tasks_edit');
 Route::post('/admin/tasks/detail', 'App\Http\Controllers\Admin\TaskController@tasks_detail');
+Route::post('/admin/tasks/save', 'App\Http\Controllers\Admin\TaskController@tasks_save');

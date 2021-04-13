@@ -118,4 +118,15 @@ class TaskController extends Controller
         );
         return $arr;
     }
+    public function tasks_save(Request $request){
+        $task = Tasks::where('tasks_id','=',$request->id)->first();
+        $task->did = $request->driver;
+        $task->desc = $request->desc;
+        $task->litre = $request->litre;
+        $task->spbu_id_1 = $request->spbu_1;
+        $task->spbu_id_2 = $request->spbu_2;
+        $task->spbu_id_3 = $request->spbu_3;
+        $task->save();
+        return $task->toJson();
+    }
 }
