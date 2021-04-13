@@ -49,3 +49,5 @@ Route::post('/admin/spbus/delete', 'App\Http\Controllers\Admin\SpbuController@sp
 
 
 Route::get('/admin/tasks', 'App\Http\Controllers\Admin\TaskController@index');
+Route::post('/admin/tasks/dt', 'App\Http\Controllers\Admin\TaskController@tasks_dt');
+Route::post('/admin/tasks/add', 'App\Http\Controllers\Admin\TaskController@tasks_add');
