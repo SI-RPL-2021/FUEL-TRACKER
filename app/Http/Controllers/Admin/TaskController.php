@@ -91,4 +91,31 @@ class TaskController extends Controller
     public function tasks_edit(Request $request){
         return Tasks::where('tasks_id','=',$request->id)->first();
     }
+    public function tasks_detail(Request $request){
+        $task = Tasks::where('tasks_id','=',$request->id)->first();
+        $arr = array(
+            "task" => $task,
+            "vehicle_no" => $task->driver->driver_data->vehicle_no,
+            "shipment_no" => 'SHP-'.$task->tasks_id,
+            "desc" => $task->desc,
+            "status" => [
+                array(
+                    "data" => $task->spbu_1,
+                    "status" => $task->status_spbu_1,
+                    "supervisor" => $task->spbu_1->supervisor->user->fullname
+                ),
+                array(
+                    "data" => $task->spbu_2,
+                    "status" => $task->status_spbu_2,
+                    "supervisor" => $task->spbu_2->supervisor->user->fullname
+                ),
+                array(
+                    "data" => $task->spbu_3,
+                    "status" => $task->status_spbu_3,
+                    "supervisor" => $task->spbu_3->supervisor->user->fullname
+                ),
+            ]
+        );
+        return $arr;
+    }
 }
