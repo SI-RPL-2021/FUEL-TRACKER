@@ -74,4 +74,18 @@ class TaskController extends Controller
         })
         ->rawColumns(['action','locations','status'])->toJson();
     }
+    public function tasks_add(Request $request){
+        $task = new Tasks();
+        $task->did = $request->driver;
+        $task->desc = $request->desc;
+        $task->litre = $request->litre;
+        $task->spbu_id_1 = $request->spbu_1;
+        $task->spbu_id_2 = $request->spbu_2;
+        $task->spbu_id_3 = $request->spbu_3;
+        $task->status_spbu_1 = 'O';
+        $task->status_spbu_2 = 'N';
+        $task->status_spbu_3 = 'N';
+        $task->save();
+        return $task->toJson();
+    }
 }
