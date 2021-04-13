@@ -88,4 +88,7 @@ class TaskController extends Controller
         $task->save();
         return $task->toJson();
     }
+    public function tasks_edit(Request $request){
+        return Tasks::where('tasks_id','=',$request->id)->first();
+    }
 }
