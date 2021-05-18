@@ -45,16 +45,13 @@ class TaskController extends Controller
             return '
                 <div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" '.$status_1.' disabled>
                         <label class="form-check-label">SPBU 1 - '.$db->spbu_1->spbu_name.'</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" '.$status_2.' disabled>
-                        <label class="form-check-label">SPBU 1 - '.$db->spbu_2->spbu_name.'</label>
+                        <label class="form-check-label">SPBU 2 - '.$db->spbu_2->spbu_name.'</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" '.$status_2.' disabled>
-                        <label class="form-check-label">SPBU 1 - '.$db->spbu_2->spbu_name.'</label>
+                        <label class="form-check-label">SPBU 3 - '.$db->spbu_3->spbu_name.'</label>
                     </div>
                 </div>
             ';
@@ -74,6 +71,7 @@ class TaskController extends Controller
         })
         ->rawColumns(['action','locations','status'])->toJson();
     }
+
     public function tasks_add(Request $request){
         $task = new Tasks();
         $task->did = $request->driver;
@@ -88,9 +86,11 @@ class TaskController extends Controller
         $task->save();
         return $task->toJson();
     }
+
     public function tasks_edit(Request $request){
         return Tasks::where('tasks_id','=',$request->id)->first();
     }
+
     public function tasks_detail(Request $request){
         $task = Tasks::where('tasks_id','=',$request->id)->first();
         $arr = array(
@@ -102,22 +102,23 @@ class TaskController extends Controller
                 array(
                     "data" => $task->spbu_1,
                     "status" => $task->status_spbu_1,
-                    "supervisor" => $task->spbu_1->supervisor->user->fullname
+                    "supervisor" => $task->spbu_1->supervisor ? $task->spbu_1->supervisor->user->fullname : 'Belum Memiliki Supervisor'
                 ),
                 array(
                     "data" => $task->spbu_2,
                     "status" => $task->status_spbu_2,
-                    "supervisor" => $task->spbu_2->supervisor->user->fullname
+                    "supervisor" => $task->spbu_2->supervisor ? $task->spbu_2->supervisor->user->fullname : 'Belum Memiliki Supervisor'
                 ),
                 array(
                     "data" => $task->spbu_3,
                     "status" => $task->status_spbu_3,
-                    "supervisor" => $task->spbu_3->supervisor->user->fullname
+                    "supervisor" =>  $task->spbu_3->supervisor ? $task->spbu_3->supervisor->user->fullname : 'Belum Memiliki Supervisor'
                 ),
             ]
         );
         return $arr;
     }
+    
     public function tasks_save(Request $request){
         $task = Tasks::where('tasks_id','=',$request->id)->first();
         $task->did = $request->driver;
@@ -129,7 +130,9 @@ class TaskController extends Controller
         $task->save();
         return $task->toJson();
     }
+
     public function tasks_delete(Request $request){
         return Tasks::where('tasks_id','=',$request->id)->first()->delete();
     }
+
 }
