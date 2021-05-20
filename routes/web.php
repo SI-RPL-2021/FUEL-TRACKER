@@ -23,6 +23,7 @@ Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 
 Route::get('/drivers', 'App\Http\Controllers\DriversController@index');
+Route::get('/drivers/tasks/dt', 'App\Http\Controllers\DriversController@dt');
 
 Route::get('/supervisors', 'App\Http\Controllers\SupervisorsController@index');
 
