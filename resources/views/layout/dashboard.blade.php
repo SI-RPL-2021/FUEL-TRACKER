@@ -256,9 +256,10 @@
 				<div class="card-body p-0">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 						<!-- Main -->
+						@if(Session::get('user')->role == 'admin')
 						<li class="nav-item">
 							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
-								<i class="icon-stats-bars"></i> <span>Dashboard</span>
+								<i class="icon-stats-bars"></i> <span>Dashboard Admin</span>
 							</a>
 						</li>
 						<li class="nav-item">
@@ -281,6 +282,19 @@
 								<i class="icon-clipboard"></i> <span>Data Task</span>
 							</a>
 						</li>
+						@elseif(Session::get('user')->role == 'driver')
+						<li class="nav-item">
+							<a href="{{url('/drivers')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Dashboard Driver</span>
+							</a>
+						</li>
+						@else
+						<li class="nav-item">
+							<a href="{{url('/supervisors')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+								<i class="icon-stats-bars"></i> <span>Dashboard Supervisor</span>
+							</a>
+						</li>
+						@endif
 					</ul>
 				</div>
 			</div>
