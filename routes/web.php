@@ -26,6 +26,7 @@ Route::get('/drivers', 'App\Http\Controllers\DriversController@index');
 Route::get('/drivers/tasks/dt', 'App\Http\Controllers\DriversController@dt');
 
 Route::get('/supervisors', 'App\Http\Controllers\SupervisorsController@index');
+Route::get('/supervisors/tasks/dt', 'App\Http\Controllers\SupervisorsController@dt');
 
 Route::get('/admin/drivers', 'App\Http\Controllers\Admin\DriversController@index');
 Route::post('/admin/drivers/edit', 'App\Http\Controllers\Admin\DriversController@drivers_edit');
