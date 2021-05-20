@@ -24,9 +24,13 @@ Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 
 Route::get('/drivers', 'App\Http\Controllers\DriversController@index');
 Route::get('/drivers/tasks/dt', 'App\Http\Controllers\DriversController@dt');
+Route::get('/drivers/tasks/{id}', 'App\Http\Controllers\DriversController@task_track');
+Route::post('/drivers/tasks/{id}', 'App\Http\Controllers\DriversController@confirm');
 
 Route::get('/supervisors', 'App\Http\Controllers\SupervisorsController@index');
 Route::get('/supervisors/tasks/dt', 'App\Http\Controllers\SupervisorsController@dt');
+Route::get('/supervisors/tasks/{id}', 'App\Http\Controllers\SupervisorsController@task_track');
+Route::post('/supervisors/tasks/{id}', 'App\Http\Controllers\SupervisorsController@confirm');
 
 Route::get('/admin/drivers', 'App\Http\Controllers\Admin\DriversController@index');
 Route::post('/admin/drivers/edit', 'App\Http\Controllers\Admin\DriversController@drivers_edit');
