@@ -14,9 +14,9 @@ class UpdTasks1 extends Migration
     public function up()
     {
         Schema::table('tasks', function($table) {
-            $table->string('arrival_spbu_1');
-            $table->string('arrival_spbu_2');
-            $table->string('arrival_spbu_3');
+            $table->string('arrival_spbu_1')->nullable();
+            $table->string('arrival_spbu_2')->nullable();
+            $table->string('arrival_spbu_3')->nullable();
         });
     }
 
