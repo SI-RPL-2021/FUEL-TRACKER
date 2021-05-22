@@ -236,7 +236,7 @@
 					<div class="card-body">
 						<div class="media">
 							<div class="mr-3">
-								<a href="#"><img src="{{ url('images/kiki.jpg') }}" width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="{{ url('images/user_ikon.jpg') }}" width="38" height="38" class="rounded-circle" alt=""></a>
 							</div>
 
 							<div class="media-body">
