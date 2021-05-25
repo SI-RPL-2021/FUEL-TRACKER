@@ -8,7 +8,7 @@
                     <h5>Hi, {{Session::get('user')->fullname}}</h5>
                     <h4 class="font-weight-bold">CEK AKTIVITAS PENGANTARAN BBM PADA HARI INI</h4>
                 </div>
-                <img src="{{asset('images/bot 1.png')}}"   height="150px" />
+                <img src="{{asset('images/bot 1.png')}}" height="150px"/>
             </div>
         </div>
         <div class="col-md-5">
