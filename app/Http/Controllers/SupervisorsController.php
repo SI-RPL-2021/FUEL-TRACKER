@@ -62,7 +62,7 @@ class SupervisorsController extends Controller
         })
         ->addColumn('tracking', function($db){
             return '
-                <a class="btn btn-secondary rounded" href="supervisors/tasks/'.$db->tasks_id.'">Track Here</a>
+                <a class="btn btn-success rounded" href="supervisors/tasks/'.$db->tasks_id.'">Track Here</a>
             ';
         })
         ->rawColumns(['tracking'])->toJson();
