@@ -9,6 +9,7 @@
 	<title>{{ config('ref.title') }}</title>
 
 	<link rel="icon" type="image/png" href="{{url('/images/xgracias-favicon.png')}}" />
+	<link rel="icon" href="{!! asset('images/logo2.png') !!}"/>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
