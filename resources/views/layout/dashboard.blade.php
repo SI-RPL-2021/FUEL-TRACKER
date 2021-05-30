@@ -258,7 +258,7 @@
 						<!-- Main -->
 						@if(Session::get('user')->role == 'admin')
 						<li class="nav-item">
-							<a href="{{url('/')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
+							<a href="{{url('/admin')}}" class="nav-link {{ Request::is('/') ? 'active' : '' }}">
 								<i class="icon-stats-bars"></i> <span>Dashboard Admin</span>
 							</a>
 						</li>

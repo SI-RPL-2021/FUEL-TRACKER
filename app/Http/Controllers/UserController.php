@@ -11,7 +11,8 @@ class UserController extends Controller
         $username = $request->username;
         $password = $request->password;
         $user = Users::where('username','=',$username)->first();
-        if($user){
+        $pass = Users::where('password','=',$password)->first();
+        if($user && $pass){
             $request->session()->put('user', $user);
             if($user->role == 'admin')
                 return redirect()->to('/admin');
