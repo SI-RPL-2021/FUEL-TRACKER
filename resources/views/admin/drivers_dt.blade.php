@@ -113,7 +113,6 @@
                 }
             });
         }
-
         function update() {
             if($('#username').val() && $('#phone_no').val() && $('#vehicle_no').val() && $('#fullname').val())
             $.ajax({
@@ -138,7 +137,6 @@
             });
             else alert('Isi Field Dengan Lengkap')
         }
-
         function remove(id) {
             if(confirm('Yakin ingin menghapus data ini?')){
                 $.ajax({
@@ -155,7 +153,6 @@
                 });
             }
         }
-
         $(function() {
             dTable = $('#table').DataTable({
                 ajax: {
