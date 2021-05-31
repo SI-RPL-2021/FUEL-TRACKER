@@ -199,7 +199,6 @@
                     }
                 ]
             });
-
             $('.dt_buttons .dt_button').eq(1).css('display', 'none')
 
             $('#table2_wrapper .dt-buttons').html("");
@@ -224,6 +223,5 @@
                 '<a href="javascript:openModal()" button class="btn btn-light bg-white"><i class="icon-add"></i> <span class="d-none d-lg-inline-block ml-2">Tambah Driver</span></a>'
             );
         });
-
     </script>
 @endsection
