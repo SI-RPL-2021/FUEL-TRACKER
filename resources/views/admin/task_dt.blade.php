@@ -83,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="boxroute" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" style="border-radius: 10%">
             <div class="modal-content">
@@ -164,7 +163,6 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 @section('js_section')
