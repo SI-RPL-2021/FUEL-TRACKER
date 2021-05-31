@@ -163,6 +163,7 @@
             </div>
         </div>
     </div>
+
 @endsection
 
 @section('js_section')
@@ -177,7 +178,6 @@
                 backdrop: 'static'
             });
         }
-
         function add() {
             if ($('#desc').val() && $('#litre').val() && $('#driver').val())
                 $.ajax({
@@ -203,7 +203,6 @@
                 });
             else alert('Isi Field Dengan Lengkap')
         }
-
         function detail(id) {
             $('#frmbox').trigger("reset");
             $('#button-update').css('display', 'inline');
@@ -257,7 +256,6 @@
                 }
             });
         }
-
         function edit(id) {
             $('#frmbox').trigger("reset");
             $('#button-update').css('display', 'inline');
