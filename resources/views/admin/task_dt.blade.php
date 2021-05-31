@@ -338,7 +338,6 @@
                 });
             }
         }
-
         $(function() {
             dTable = $('#table').DataTable({
                 ajax: {
