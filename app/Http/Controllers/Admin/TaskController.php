@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Tasks;
 use App\Models\Users;
 use App\Models\Spbu;
+use DateTime;
 
 class TaskController extends Controller
 {
@@ -17,7 +18,12 @@ class TaskController extends Controller
     }
 
     public function tasks_dt(Request $request){
-        $tasks = Tasks::all();
+        $query = Tasks::query();
+        $date = $request->date;
+        $query->when($date, function($query, $date){
+            $query->whereDate('created_at', $date);
+        });
+        $tasks = $query->get();
         return datatables($tasks)
         ->addColumn('shipment_no', function($db){
             return 'SHP-'.$db->tasks_id;
@@ -60,6 +66,9 @@ class TaskController extends Controller
             return '
                 <a class="btn btn-success" href="javascript:detail(\''.$db->tasks_id.'\')">Details</a>
             ';
+        })
+        ->editColumn('created_at', function($db){
+            return (new DateTime($db->created_at))->format('d M Y');
         })
         ->addColumn('action', function($db){
             return '

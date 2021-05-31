@@ -13,6 +13,7 @@
                     <th>Lokasi Pengiriman</th>
                     <th>Status</th>
                     <th>Waktu</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -346,9 +347,9 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     type: 'post',
-                    // data: function(d) {
-                    //     d.studyprogram = $('#filter-studyprogram').val()
-                    // },
+                    data: function(d) {
+                        d.date = $('#filter_tanggal').val()
+                    },
                 },
                 columns: [{
                         data: 'shipment_no',
@@ -384,6 +385,11 @@
                         searchable: false,
                     },
                     {
+                        data: 'created_at',
+                        name: 'created_at',
+                        className: 'center'
+                    },
+                    {
                         data: 'action',
                         name: 'action',
                         className: 'center',
@@ -416,6 +422,12 @@
             $('.dt-buttons').append(
                 '<a href="javascript:openModal()" button class="btn btn-light bg-white"><i class="icon-add"></i> <span class="d-none d-lg-inline-block ml-2">Tambah Task</span></a>'
             );
+            $('.dt-buttons').append(
+                `<input type="date" style="width:200px;height:100%" class="ml-2 btn-lg form-control" id="filter_tanggal" placeholder="Filter Tanggal">`
+            );
+            $("#filter_tanggal").change(function(){
+                dTable.draw()
+            });
         });
 
     </script>
