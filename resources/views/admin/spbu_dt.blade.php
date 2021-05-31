@@ -86,7 +86,6 @@
                 backdrop: 'static'
             });
         }
-
         function add() {
             if($('#spbu_name').val() && $('#address').val() && $('#city').val() && $('#iframe').val())
             $.ajax({
@@ -110,7 +109,6 @@
             });
             else alert('Isi Field Dengan Lengkap')
         }
-
         function detailRoute(id){
             $('#frmbox').trigger("reset");
             $('#button-update').css('display','inline');
@@ -128,7 +126,6 @@
                 }
             });
         }
-
         function edit(id) {
             $('#frmbox').trigger("reset");
             $('#button-update').css('display','inline');
@@ -150,7 +147,6 @@
                 }
             });
         }
-
         function update() {
             if($('#spbu_name').val() && $('#address').val() && $('#city').val() && $('#iframe').val())
             $.ajax({
@@ -175,7 +171,6 @@
             });
             else alert('Isi Field Dengan Lengkap')
         }
-
         function remove(id) {
             if(confirm('Yakin ingin menghapus data ini?')){
                 $.ajax({
