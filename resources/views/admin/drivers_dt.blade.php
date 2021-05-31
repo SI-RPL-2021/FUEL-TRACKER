@@ -69,7 +69,6 @@
                 backdrop: 'static'
             });
         }
-
         function add() {
             if($('#username').val() && $('#phone_no').val() && $('#vehicle_no').val() && $('#fullname').val())
             $.ajax({
@@ -93,7 +92,6 @@
             });
             else alert('Isi Field Dengan Lengkap')
         }
-
         function edit(id) {
             $('#frmbox').trigger("reset");
             $('#button-update').css('display','inline');
