@@ -28,7 +28,7 @@ Route::get('/drivers/tasks/{id}', 'App\Http\Controllers\DriversController@task_t
 Route::post('/drivers/tasks/{id}', 'App\Http\Controllers\DriversController@confirm');
 
 Route::get('/supervisors', 'App\Http\Controllers\SupervisorsController@index');
-Route::get('/supervisors/tasks/dt', 'App\Http\Controllers\SupervisorsController@dt');
+Route::post('/supervisors/tasks/dt', 'App\Http\Controllers\SupervisorsController@dt');
 Route::get('/supervisors/tasks/{id}', 'App\Http\Controllers\SupervisorsController@task_track');
 Route::post('/supervisors/tasks/{id}', 'App\Http\Controllers\SupervisorsController@confirm');
 
