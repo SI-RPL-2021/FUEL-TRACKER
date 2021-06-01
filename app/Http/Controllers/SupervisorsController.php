@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Users;
 use App\Models\Tasks;
+use DateTime;
 
 class SupervisorsController extends Controller
 {
@@ -26,11 +27,17 @@ class SupervisorsController extends Controller
         $user = Users::where('uid','=',$request->session()->get('user')->uid)->first();
         $tasks = null;
         if($user->supervisor_data->spbu){
-            $tasks = Tasks::where(function ($query) use($user) {
+            $query = Tasks::query();
+            $query->where(function ($query) use($user) {
                 $query->where('spbu_id_1', '=', $user->supervisor_data->spbu->spbu_id)
                     ->orWhere('spbu_id_2', '=', $user->supervisor_data->spbu->spbu_id)
                     ->orWhere('spbu_id_3', '=', $user->supervisor_data->spbu->spbu_id);
-            })->get();
+                });
+                $date = $request->date;
+                $query->when($date, function($query, $date){
+                    $query->whereDate('created_at', $date);
+                });
+                $tasks = $query->get();
         }
         return datatables($tasks)
         ->addColumn('shipment_no', function($db){
@@ -41,6 +48,9 @@ class SupervisorsController extends Controller
         })
         ->addColumn('date', function($db){
             return $db->created_at;
+        })
+        ->editColumn('created_at', function($db){
+            return (new DateTime($db->created_at))->format('d M Y');
         })
         ->addColumn('status', function($db) use($user) {
             if($user->supervisor_data->spbu){
