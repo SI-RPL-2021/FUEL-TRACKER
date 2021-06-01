@@ -39,6 +39,7 @@
                     <th>Liter</th>
                     <th>Tracking</th>
                     <th>Status</th>
+                    <th>Waktu</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -57,7 +58,10 @@
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    type: 'get',
+                    type: 'post',
+                    data: function(d) {
+                        d.date = $('#filter_tanggal').val()
+                    },
                 },
                 columns: [{
                         data: 'shipment_no',
@@ -95,6 +99,11 @@
                         data: 'status',
                         name: 'status',
                         className: 'center',
+                    }, 
+                    {
+                        data: 'created_at',
+                        name: 'created_at',
+                        className: 'center',
                     },
                 ]
             });
@@ -117,6 +126,11 @@
             $('.daterange-single').datepicker({
                 format: "yyyy-mm-dd",
                 todayHighlight: true
+            });$('.dt-buttons').append(
+                `<input type="date" style="width:200px;height:100%" class="ml-2 btn-lg form-control" id="filter_tanggal" placeholder="Filter Tanggal">`
+            );
+            $("#filter_tanggal").change(function(){
+                dTable.draw()
             });
         });
     </script>
