@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::post('/login_eval', 'App\Http\Controllers\UserController@index');
 Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 
+Route::get('/profile', 'App\Http\Controllers\UserController@profile');
+Route::post('/profile', 'App\Http\Controllers\UserController@edit_profile');
+
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 
 Route::get('/drivers', 'App\Http\Controllers\DriversController@index');
@@ -61,3 +64,4 @@ Route::post('/admin/tasks/add', 'App\Http\Controllers\Admin\TaskController@tasks
 Route::post('/admin/tasks/edit', 'App\Http\Controllers\Admin\TaskController@tasks_edit');
 Route::post('/admin/tasks/save', 'App\Http\Controllers\Admin\TaskController@tasks_save');
 Route::post('/admin/tasks/delete', 'App\Http\Controllers\Admin\TaskController@tasks_delete');
+
