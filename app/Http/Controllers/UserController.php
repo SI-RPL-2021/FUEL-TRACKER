@@ -38,6 +38,6 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->save();
         $request->session()->put('user', $user);
-        return redirect()->back();
+        return json_encode("201");
     }
 }

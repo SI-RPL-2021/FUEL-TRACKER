@@ -34,6 +34,7 @@
 @section('js_section')
     <script src="{{ url('public/themes/limitless/global/js/plugins/extensions/jquery_ui/interactions.min.js') }}">
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         function save(){
             const form = document.getElementById(`frm`);
@@ -47,7 +48,10 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                dataType:'json'
+                dataType:'json',
+                success: function (e) {
+                    swal('Edit Profile Sukses','Profile sukses diedit','success')
+                }
             })
         }
     </script>
