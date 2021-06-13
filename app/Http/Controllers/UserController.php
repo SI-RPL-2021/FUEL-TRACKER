@@ -12,7 +12,7 @@ class UserController extends Controller
         $password = $request->password;
         $user = Users::where('username','=',$username)->first();
         $pass = Users::where('password','=',$password)->first();
-        if($user && $pass){
+        if($user && $user->password == $password){
             $request->session()->put('user', $user);
             if($user->role == 'admin')
                 return redirect()->to('/admin');
