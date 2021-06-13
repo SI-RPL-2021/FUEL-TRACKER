@@ -32,5 +32,12 @@ class UserController extends Controller
     public function profile(Request $request){
         return view('layout.profile');
     }
-
+    public function edit_profile(Request $request){
+        $user = Users::where('username','=',$request->session()->get('user')->username)->first();
+        $user->fullname = $request->name;
+        $user->password = $request->password;
+        $user->save();
+        $request->session()->put('user', $user);
+        return redirect()->back();
+    }
 }
