@@ -247,7 +247,7 @@
 								</div>
 							</div>
 							<div class="ml-3 align-self-center">
-								<a href="#" class="text-white"><i class="icon-cog3"></i></a>
+								<a href="{{url('/profile')}}" class="text-white"><i class="icon-cog3"></i></a>
 							</div>
 						</div>
 					</div>
